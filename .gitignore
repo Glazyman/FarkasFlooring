@@ -1,0 +1,11 @@
+.DS_Store
+Thumbs.db
+*.log
+
+.claude/
+
+# Leftover downloads / duplicates (not used by the site)
+images/logo-bluebook-test.png
+images/logo-bluebook2.png
+images/logo-bluebook.png
+images/*-old.jpg
