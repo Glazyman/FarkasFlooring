@@ -1148,26 +1148,25 @@ address { font-style: normal; }
 }
 
 .review-grid {
-  columns: 1;
+  display: grid;
+  grid-template-columns: 1fr;
   gap: var(--space-5);
 }
 
 @media (min-width: 640px) {
   .review-grid {
-    columns: 2;
-    gap: var(--space-5);
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
 @media (min-width: 1024px) {
   .review-grid {
-    columns: 3;
+    grid-template-columns: repeat(3, 1fr);
     gap: var(--space-6);
   }
 }
 
 .review-card {
-  break-inside: avoid;
   background: var(--white);
   border: 1px solid var(--line);
   border-radius: var(--radius-xl);
@@ -1175,7 +1174,6 @@ address { font-style: normal; }
   display: flex;
   flex-direction: column;
   gap: var(--space-4);
-  margin-bottom: var(--space-6);
   transition: box-shadow 280ms var(--ease), transform 280ms var(--ease);
 }
 
@@ -1212,6 +1210,7 @@ address { font-style: normal; }
   color: var(--muted);
   line-height: 1.7;
   flex: 1;
+  margin-bottom: auto;
 }
 
 .review-footer {
@@ -1384,6 +1383,16 @@ address { font-style: normal; }
   color: var(--muted);
   line-height: 1.7;
   max-width: 48ch;
+  margin-bottom: var(--space-5);
+}
+
+.contact-area {
+  font-size: var(--text-sm);
+  font-weight: 300;
+  color: var(--muted-light);
+  line-height: 1.65;
+  max-width: 48ch;
+  margin-bottom: var(--space-8);
 }
 
 .contact-right {
