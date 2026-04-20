@@ -883,8 +883,20 @@ address { font-style: normal; }
 .advantage-strip-sub {
   font-size: var(--text-sm);
   font-weight: 300;
-  color: rgba(250,249,245,.55);
+  color: rgba(250,249,245,.65);
   line-height: 1.65;
+}
+
+.advantage-strip-sub a {
+  color: var(--brand);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  text-decoration-thickness: 1px;
+  font-weight: 500;
+}
+
+.advantage-strip-sub a:hover {
+  color: #e0782a;
 }
 
 .advantage-items {
