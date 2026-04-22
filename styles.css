@@ -1756,77 +1756,38 @@ address { font-style: normal; }
 }
 
 /* ══════════════════════════════════════════════════
-   GALLERY
+   INSTAGRAM / GALLERY
 ══════════════════════════════════════════════════ */
 .gallery-section {
-  background: var(--parchment);
+  background: var(--paper);
 }
 
-.gallery-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: var(--space-3);
+.insta-handle {
+  color: var(--brand);
+  font-weight: 500;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  text-decoration-thickness: 1px;
 }
 
-@media (min-width: 768px) {
-  .gallery-grid {
-    grid-template-columns: repeat(3, 1fr);
-    grid-auto-rows: 260px;
-  }
-  .gallery-item--wide {
-    grid-column: span 2;
-  }
-  .gallery-item--tall {
-    grid-row: span 2;
-  }
+.insta-handle:hover {
+  color: var(--brand-dark);
 }
 
-.gallery-item {
-  position: relative;
-  margin: 0;
-  border-radius: var(--radius-lg);
-  overflow: hidden;
-  background: var(--stone);
-  aspect-ratio: 4/3;
-}
-
-@media (min-width: 768px) {
-  .gallery-item {
-    aspect-ratio: unset;
-  }
-}
-
-.gallery-item img {
+.insta-feed-wrap {
   width: 100%;
-  height: 100%;
-  object-fit: cover;
+  min-height: 300px;
+}
+
+.insta-feed-wrap behold-widget {
   display: block;
-  transition: transform 0.5s ease;
+  width: 100%;
 }
 
-.gallery-item:hover img {
-  transform: scale(1.04);
-}
-
-.gallery-item figcaption {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  padding: var(--space-3) var(--space-4);
-  background: linear-gradient(to top, rgba(28, 20, 16, 0.82) 0%, transparent 100%);
-  font-family: var(--font-sans);
-  font-size: var(--text-xs);
-  color: rgba(250, 249, 245, 0.9);
-  letter-spacing: 0.03em;
-  opacity: 0;
-  transform: translateY(4px);
-  transition: opacity 0.3s ease, transform 0.3s ease;
-}
-
-.gallery-item:hover figcaption {
-  opacity: 1;
-  transform: translateY(0);
+.insta-fallback {
+  display: flex;
+  justify-content: center;
+  margin-top: var(--space-8);
 }
 
 /* ══════════════════════════════════════════════════
