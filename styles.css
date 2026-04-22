@@ -1777,11 +1777,6 @@ address { font-style: normal; }
 .insta-feed-wrap {
   width: 100%;
   min-height: 300px;
-  border-radius: var(--radius-xl);
-  overflow: hidden;
-  border: 1px solid var(--line);
-  box-shadow: var(--shadow-card);
-  background: var(--white);
 }
 
 .insta-feed-wrap behold-widget {
