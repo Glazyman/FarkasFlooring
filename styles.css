@@ -1777,11 +1777,29 @@ address { font-style: normal; }
 .insta-feed-wrap {
   width: 100%;
   min-height: 300px;
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  border: 1px solid var(--line);
+  box-shadow: var(--shadow-card);
+  background: var(--white);
 }
 
 .insta-feed-wrap behold-widget {
   display: block;
   width: 100%;
+}
+
+/* Mobile: tighter padding so feed fills the screen edge-to-edge */
+@media (max-width: 640px) {
+  .gallery-section .container {
+    padding-inline: var(--space-4);
+  }
+
+  .insta-feed-wrap {
+    border-radius: var(--radius-lg);
+    /* reduce side gap so photos are larger on small screens */
+    margin-inline: calc(-1 * var(--space-1));
+  }
 }
 
 .insta-fallback {
